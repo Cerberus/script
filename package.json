@@ -1,0 +1,42 @@
+{
+	"name": "@cerberus/script",
+	"version": "1.0.0",
+	"description": "simple npm package",
+	"main": "none",
+	"dependencies": {},
+	"devDependencies": {
+		"@types/jest": "^24.0.18",
+		"@types/node": "^12.7.3",
+		"husky": "^3.0.5",
+		"jest": "^24.9.0",
+		"lint-staged": "^9.2.5",
+		"prettier": "^1.18.2",
+		"standard-version": "^7.0.0",
+		"ts-jest": "^24.0.2",
+		"ts-node": "^8.3.0",
+		"ts-node-dev": "^1.0.0-pre.42",
+		"tslint": "^5.19.0",
+		"tslint-config-airbnb": "^5.11.1",
+		"tslint-config-prettier": "^1.18.0",
+		"typescript": "^3.6.2"
+	},
+	"scripts": {
+		"test": "jest --silent",
+		"test:watch": "jest --watch",
+		"tslint": "tslint -p .",
+		"release": "standard-version"
+	},
+	"lint-staged": {
+		"*.ts": [
+			"prettier --write",
+			"tslint -p . --fix",
+			"git add"
+		]
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Cerberus/ts"
+	},
+	"author": "Thanaphol",
+	"license": "MIT"
+}
