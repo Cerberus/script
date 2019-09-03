@@ -2,7 +2,7 @@
 	"name": "@cerberus/script",
 	"version": "1.0.0",
 	"description": "simple npm package",
-	"main": "none",
+	"main": "src/index.ts",
 	"dependencies": {},
 	"devDependencies": {
 		"@types/jest": "^24.0.18",
@@ -35,8 +35,15 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Cerberus/ts"
+		"url": "git+https://github.com/Cerberus/script.git"
 	},
+	"bugs": {
+    "url": "https://github.com/Cerberus/script/issues"
+	},
+	"homepage": "https://github.com/Cerberus/script#readme",
 	"author": "Thanaphol",
-	"license": "MIT"
+	"license": "MIT",
+	"publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
+  }
 }
