@@ -2,8 +2,8 @@
 	"name": "@cerberus/script",
 	"version": "1.0.0",
 	"description": "simple npm package",
-	"main": "src/index.ts",
-	"types": "dist/index.d.ts",
+	"main": "lib/index.js",
+	"types": "lib/index.d.ts",
 	"dependencies": {},
 	"devDependencies": {
 		"@types/jest": "^24.0.18",
@@ -22,7 +22,7 @@
 		"typescript": "^3.6.2"
 	},
 	"scripts": {
-		"build": "tsc",
+		"build": "rm -rf lib;tsc",
 		"test": "jest --silent",
 		"test:watch": "jest --watch",
 		"tslint": "tslint -p .",
@@ -47,5 +47,6 @@
 	"license": "MIT",
 	"publishConfig": {
     "registry":"https://npm.pkg.github.com/"
-  }
+	},
+	"files": ["lib/**/*"]
 }
