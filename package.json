@@ -1,6 +1,6 @@
 {
 	"name": "@cerberus/script",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "simple npm package",
 	"main": "lib/index.js",
 	"types": "lib/index.d.ts",
@@ -40,13 +40,15 @@
 		"url": "git+https://github.com/Cerberus/script.git"
 	},
 	"bugs": {
-    "url": "https://github.com/Cerberus/script/issues"
+		"url": "https://github.com/Cerberus/script/issues"
 	},
 	"homepage": "https://github.com/Cerberus/script#readme",
 	"author": "Thanaphol",
 	"license": "MIT",
 	"publishConfig": {
-    "registry":"https://npm.pkg.github.com/"
+		"registry": "https://npm.pkg.github.com/"
 	},
-	"files": ["lib/**/*"]
+	"files": [
+		"lib/**/*"
+	]
 }
