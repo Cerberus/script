@@ -1,9 +1,9 @@
 {
 	"compilerOptions": {
-		"lib": ["es2018", "dom"],
+		"lib": ["esnext", "dom"],
+		"module": "esnext",
+		"target": "es2020",
     "outDir": "lib",
-		"module": "commonjs",
-		"target": "es2017",
 		"sourceMap": true,
 		"moduleResolution": "node",
 		"strict": true,
