@@ -28,13 +28,6 @@
 		"tslint": "tslint -p .",
 		"release": "standard-version"
 	},
-	"lint-staged": {
-		"*.ts": [
-			"prettier --write",
-			"tslint -p . --fix",
-			"git add"
-		]
-	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/Cerberus/script.git"
