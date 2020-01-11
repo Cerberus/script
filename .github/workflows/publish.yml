@@ -21,7 +21,7 @@ jobs:
         id: yarn-cache
         run: |
           echo "::set-output name=dir::$(yarn cache dir)"
-          pwd ${{ steps.yarn-cache.outputs.dir }}
+          ls ${{ steps.yarn-cache.outputs.dir }}
       - uses: actions/cache@v1.1.0
         with:
           path: ${{ steps.yarn-cache.outputs.dir }}
