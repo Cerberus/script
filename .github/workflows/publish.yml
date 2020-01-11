@@ -24,7 +24,6 @@ jobs:
         with:
           path: ${{ steps.yarn-cache.outputs.dir }}
           key: yarn-${{ hashFiles('yarn.lock') }}
-          restore-keys: yarn-
       - name: Install packages
         run: yarn
       - name: Build
