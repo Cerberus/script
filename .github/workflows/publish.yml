@@ -28,12 +28,10 @@ jobs:
           restore-key: yarn-
       - name: Install packages
         run: yarn
-      - name: Build
-        run: yarn build
       - name: Test
         run: yarn test
-      - name: Publish
-        run: npm publish
+      - name: Build & Publish
+        run: yarn build; npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
         if: contains(github.event.head_commit.message, '.')
