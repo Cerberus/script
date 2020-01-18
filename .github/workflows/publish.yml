@@ -15,8 +15,8 @@ jobs:
         run: |
           tag=${{ github.event.head_commit.message }}
           echo $tags
-          echo ${{ $tag > 0 }}
-          echo ${{ Number($tag) > 0 }}
+          echo ${{ tag > 0 }}
+          echo ${{ Number(tag) > 0 }}
       # - name: Use Node.js
       #   uses: actions/setup-node@master
       #   with:
