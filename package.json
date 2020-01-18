@@ -26,6 +26,7 @@
 		"test": "jest --silent",
 		"test:watch": "jest --watch",
 		"tslint": "tslint -p .",
+		"deploy": "npm version patch | xargs git tag -d",
 		"release": "standard-version"
 	},
 	"repository": {

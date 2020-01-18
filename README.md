@@ -4,12 +4,12 @@ A simple script
 
 ### Publish to Github Package Registry
 
-1). Make a version `patch`, `minor` or `major`.
+1). Make a `patch` version (For `minor` or `major`. Please do it manually).
 ```
-npm version patch
+yarn deploy
 ```
 
 2). Deploy to CI.
 ```
-git push --follow-tags origin master
+git push origin master
 ```
