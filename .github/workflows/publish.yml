@@ -14,7 +14,6 @@ jobs:
       - name: Test
         run: |
           echo ${{ github.event.head_commit.message > 0 }}
-          echo ${{ Number(github.event.head_commit.message) > 0 }}
       # - name: Use Node.js
       #   uses: actions/setup-node@master
       #   with:
