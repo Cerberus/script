@@ -17,7 +17,7 @@ jobs:
           echo "::set-output name=tag::$(echo ${{  github.event.head_commit.message  }})"
       - name: Test
         run: |
-          path: ${{ steps.tag.outputs.tag > 0 }}
+          echo ${{ steps.tag.outputs.tag > 0 }}
           echo ${{ github.event.head_commit.message }}
           echo ${{ github.event.head_commit.message > 0 }}
           echo ${{ toJSON(github.event.head_commit.message) > 0 }}
