@@ -11,7 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-        run: should_publish=${{ contains(github.event.head_commit.message, '.') }}
       - name: Use Node.js
         uses: actions/setup-node@master
         with:
@@ -31,6 +30,8 @@ jobs:
         run: yarn
       - name: Test
         run: yarn test
+      - name: Should publish ?
+        run: should_publish=${{ contains(github.event.head_commit.message, '.') }}
       - name: Build
         run: yarn build
         if: $should_publish
