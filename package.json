@@ -16,16 +16,12 @@
 		"ts-jest": "^24.0.2",
 		"ts-node": "^8.3.0",
 		"ts-node-dev": "^1.0.0-pre.42",
-		"tslint": "^5.19.0",
-		"tslint-config-airbnb": "^5.11.1",
-		"tslint-config-prettier": "^1.18.0",
 		"typescript": "^3.6.2"
 	},
 	"scripts": {
 		"build": "rm -rf lib;tsc",
 		"test": "jest --silent",
 		"test:watch": "jest --watch",
-		"tslint": "tslint -p .",
 		"deploy": "npm version patch | xargs git tag -d",
 		"release": "standard-version"
 	},
