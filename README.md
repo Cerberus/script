@@ -1,4 +1,4 @@
-## Script
+## Script ![Publish](https://github.com/Cerberus/script/workflows/Publish/badge.svg)
 
 A simple script
 
