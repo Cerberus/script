@@ -10,7 +10,7 @@
 		"baseUrl": ".",
 		"declaration": true,
 		"declarationMap": true,
-			"paths": {
+		"paths": {
 			"*": ["src/*", "node_modules/*"]
 		},
 		"allowSyntheticDefaultImports": true
