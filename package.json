@@ -2,8 +2,8 @@
 	"name": "@cerberus/script",
 	"version": "1.0.36",
 	"description": "simple npm package",
-	"main": "lib/index.js",
-	"types": "lib/index.d.ts",
+	"module": "lib/esm/index.js",
+	"main": "lib/cjs/index.js",
 	"dependencies": {},
 	"devDependencies": {
 		"@types/jest": "^24.0.18",
@@ -19,7 +19,7 @@
 		"typescript": "^3.6.2"
 	},
 	"scripts": {
-		"build": "rm -rf lib;tsc",
+		"build": "rm -rf lib;tsc && tsc -p tsconfig-cjs.json",
 		"test": "jest --silent",
 		"test:watch": "jest --watch",
 		"deploy": "npm version patch | xargs git tag -d",

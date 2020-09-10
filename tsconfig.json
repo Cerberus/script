@@ -1,9 +1,9 @@
 {
 	"compilerOptions": {
 		"lib": ["esnext", "dom"],
-		"module": "commonjs",
+		"module": "esnext",
 		"target": "es2020",
-    "outDir": "lib",
+    "outDir": "lib/esm",
 		"sourceMap": true,
 		"moduleResolution": "node",
 		"strict": true,
