@@ -4,6 +4,11 @@
 	"description": "simple npm package",
 	"module": "lib/esm/index.js",
 	"main": "lib/cjs/index.js",
+	"types": "lib/esm/index.d.ts",
+	"exports": {
+		".": "./lib/cjs/index.js",
+		"./": "./lib/cjs/"
+	},
 	"dependencies": {},
 	"devDependencies": {
 		"@types/jest": "^24.0.18",

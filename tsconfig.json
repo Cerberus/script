@@ -4,12 +4,10 @@
 		"module": "esnext",
 		"target": "es2020",
     "outDir": "lib/esm",
-		"sourceMap": true,
 		"moduleResolution": "node",
 		"strict": true,
 		"baseUrl": ".",
 		"declaration": true,
-		"declarationMap": true,
 		"paths": {
 			"*": ["src/*", "node_modules/*"]
 		},
