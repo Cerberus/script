@@ -1,1 +1,3 @@
-export const devide = (x: number, y: number) => x / y
+export const devide = (x: number, y: number) => {
+	return x / y
+}

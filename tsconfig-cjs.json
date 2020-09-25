@@ -3,6 +3,6 @@
 	"compilerOptions": {
 		"module": "commonjs",
 		"sourceMap": true,
-    "outDir": "lib/cjs"
+		"outDir": "lib/cjs"
 	}
 }
