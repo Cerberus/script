@@ -1,4 +1,6 @@
-module.exports = {
+import { Config } from '@jest/types'
+
+const config: Partial<Config.InitialOptions> = {
 	preset: 'ts-jest',
 	testEnvironment: 'node',
 	globals: {
@@ -8,3 +10,5 @@ module.exports = {
 	},
 	moduleDirectories: ['node_modules', 'src'],
 }
+
+export default config
