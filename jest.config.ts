@@ -1,7 +1,6 @@
 import { Config } from '@jest/types'
 
 const config: Partial<Config.InitialOptions> = {
-	automock: true,
 	preset: 'ts-jest',
 	testEnvironment: 'node',
 	globals: {
