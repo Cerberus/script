@@ -1,17 +1,23 @@
-import * as glob from 'glob'
+import { tree } from './cache'
 
-const mockPaths = glob.sync('src/**/__mocks__/*.ts*')
+export const shortPath = (path: string) => path.replace('src/', '')
+export const toRelativePath = (path: string) =>
+	path.replace(/(.+)\/src/g, 'src')
 
-export const globalMock = () => {
-	jest.resetModules()
+export const mock = (absolutePath: string) => {
+	const relativePath = toRelativePath(absolutePath)
+	beforeEach(() => {
+		jest.resetModules()
 
-	mockPaths
-		.map(absoluteMockPath => {
-			const mockPath = absoluteMockPath.replace('src/', '')
-			const actualPath = mockPath.replace('/__mocks__', '')
-			return [mockPath, actualPath]
-		})
-		.forEach(([mockPath, actualPath]) => {
-			jest.mock(actualPath, () => require(mockPath))
-		})
+		const mockPaths = tree[shortPath(relativePath)]
+
+		mockPaths
+			.map(mockPath => {
+				const actualPath = mockPath.replace('/__mocks__', '')
+				return [mockPath, actualPath]
+			})
+			.forEach(([mockPath, actualPath]) => {
+				jest.mock(actualPath, () => require(mockPath))
+			})
+	})
 }

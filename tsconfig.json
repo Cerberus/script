@@ -3,7 +3,7 @@
 		"lib": ["esnext", "dom"],
 		"module": "esnext",
 		"target": "es2019",
-    "outDir": "lib/esm",
+		"outDir": "lib/esm",
 		"moduleResolution": "node",
 		"strict": true,
 		"baseUrl": ".",
