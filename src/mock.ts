@@ -21,3 +21,11 @@ export const mock = (absolutePath: string) => {
 			})
 	})
 }
+
+export const override = (path: string, fn: () => Record<string, any>) => {
+	const mockpath = path.replace(/\/(\w+)$/, '/__mocks__/$1')
+	jest.mock(path, () => ({
+		...require(mockpath),
+		...fn(),
+	}))
+}

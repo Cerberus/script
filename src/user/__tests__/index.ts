@@ -1,6 +1,6 @@
-import { mock } from 'mock'
+import { mock, override } from 'mock'
 
-describe('index', () => {
+describe('user', () => {
 	mock(__filename)
 
 	it('format name', async () => {
@@ -9,7 +9,7 @@ describe('index', () => {
 		expect(await getName()).toEqual('Mr.fake')
 	})
 	it('format name 2', async () => {
-		jest.mock('../api', () => ({
+		override('user/api', () => ({
 			fetchName: () => Promise.resolve('fake 2'),
 		}))
 		const { getName } = await import('..')

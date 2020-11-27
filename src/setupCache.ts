@@ -44,7 +44,8 @@ const tree = filenames.reduce(
 
 fs.writeFileSync(
 	__dirname + '/cache.ts',
-	`export const tree: Record<string, string[]> = JSON.parse('${JSON.stringify(
-		tree,
-	)}')`,
+	`export const tree: Record<string, string[]> = JSON.parse(
+	'${JSON.stringify(tree)}',
+)
+`,
 )
