@@ -27,7 +27,7 @@
 	},
 	"scripts": {
 		"build": "rm -rf lib;tsc && tsc -p tsconfig-cjs.json",
-		"setup:cache": "ts-node -P tsconfig-cjs.json src/setupCache.ts",
+		"setup:cache": "ts-node -P tsconfig-cjs.json src/setupCache.ts --files lib.d.ts",
 		"test": "jest",
 		"deploy": "npm version patch | xargs git tag -d",
 		"release": "standard-version"

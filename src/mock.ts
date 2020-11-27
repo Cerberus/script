@@ -1,5 +1,3 @@
-import { tree } from './cache'
-
 export const shortPath = (path: string) => path.replace('src/', '')
 export const toRelativePath = (path: string) =>
 	path.replace(/(.+)\/src/g, 'src')
@@ -9,7 +7,10 @@ export const mock = (absolutePath: string) => {
 	beforeEach(() => {
 		jest.resetModules()
 
-		const mockPaths = tree[shortPath(relativePath)]
+		// @ts-ignore ts-node cannot read declaration file
+		const mockPaths = (TREE as Record<string, string[]>)[
+			shortPath(relativePath)
+		]
 
 		mockPaths
 			.map(mockPath => {
