@@ -1,0 +1,4 @@
+{
+	"extends": "./tsconfig-cjs.json",
+	"exclude": ["node_modules", "**/__tests__/**/*", "**/__mocks__/**/*", "src/mock.ts", "src/setupCache.ts", "src/setupTests.ts"]
+}

@@ -13,6 +13,5 @@
 		},
 		"allowSyntheticDefaultImports": true
 	},
-	"include": ["src/**/*", "lib.d.ts"],
-	"exclude": ["node_modules"]
+	"include": ["src/**/*", "lib.d.ts"]
 }
