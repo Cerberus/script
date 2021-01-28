@@ -6,8 +6,8 @@ export const mock = (absolutePath: string) => {
 	const relativePath = toRelativePath(absolutePath)
 	beforeEach(() => {
 		jest.resetModules()
-
-		const mockPaths = TREE[shortPath(relativePath)]
+	// @ts-ignore for running yarn setup:cache faster
+		const mockPaths = (TREE as Record<string, string[]>)[shortPath(relativePath)]
 
 		mockPaths
 			.map(mockPath => {
